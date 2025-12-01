@@ -2,10 +2,10 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-movies_dict = pickle.load(open(r'F:\project\Recommander system\movie_recommander_using_tfidf_vectroizer\movie_dict.pkl','rb'))
+movies_dict = pickle.load(open(r'movie_dict.pkl','rb'))
 movies = pd.DataFrame(movies_dict)
 
-similarity = pickle.load(open(r'F:\project\Recommander system\movie_recommander_using_tfidf_vectroizer\similarity.pkl','rb'))
+similarity = pickle.load(open(r'similarity.pkl','rb'))
 
 def recommend(movie):
     movie_index = movies[movies['title']==movie].index[0]
